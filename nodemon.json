@@ -1,0 +1,16 @@
+{
+  "ignore": [
+    ".git",
+    "public/*",
+    "src/*",
+    "scripts/*",
+    "test/*"
+  ],
+  "watch": [
+    "mock/*"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "delay": 2500
+}
