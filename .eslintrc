@@ -32,11 +32,8 @@
     "jsx-quotes": [
       "error",
       "prefer-single"
-    ]
-  },
-  "globals": {
-    "fetch": true,
-    "DEBUG": true
+    ],
+    "camelcase": "off"
   },
   "env": {
     "jest": true,
