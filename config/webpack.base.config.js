@@ -4,6 +4,7 @@ const os = require('os')
 const isWsl = require('is-wsl')
 const { resolve } = require('path')
 const HappyPack = require('happypack')
+const { DefinePlugin } = require('webpack')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
@@ -187,7 +188,11 @@ exports.config = {
       from: resolve(__dirname, '..', 'public'),
       to: resolve(__dirname, '..', 'dist'),
       ignore: ['index.html', 'manifest.json']
-    }])
+    }]),
+    // 添加全局变量
+    new DefinePlugin({
+      DEBUG: !isProd
+    })
   ].filter(Boolean),
   performance: {
     hints: false

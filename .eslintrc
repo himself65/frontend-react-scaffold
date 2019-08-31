@@ -35,6 +35,9 @@
     ],
     "camelcase": "off"
   },
+  "globals": {
+    "DEBUG": true
+  },
   "env": {
     "jest": true,
     "browser": true
